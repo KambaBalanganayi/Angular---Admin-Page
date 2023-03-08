@@ -1,0 +1,16 @@
+
+<article *ngIf="!peutEditer; else editable" class="unProduit"  >
+    <p><a routerLink="/produit/{{produit.id_biere}}">Nom : {{produit.nom}}</a></p>
+    <p>Brasserie : {{produit.brasserie}}</p>
+    <p>Description : {{produit.description}}</p>
+</article>
+<ng-template #editable class="unProduitEditable">
+    <form [formGroup]="modifForm">
+        <p>Nom : <input formControlName="nom"></p>
+        <p>Brasserie : <input formControlName="brasserie"></p>
+        <p>Description : <textarea formControlName="description"></textarea></p>
+        <button (click)="modifier()" [disabled]="!modifForm.dirty || !modifForm.valid">Modifier</button>
+        <button (click)="annuler()" [disabled]="!modifForm.dirty">Annuler</button>
+    </form>
+</ng-template>
+    <p *ngIf="estConnecte">Est éditable ? <input type="checkbox" (change)="changeEditable()" [(ngModel)]="peutEditer"></p>

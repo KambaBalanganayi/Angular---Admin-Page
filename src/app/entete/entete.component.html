@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <h1><a mat-button routerLink="/"> {{titre}} - {{soustitre}}</a></h1>
+        <span class="filler"></span>
+        <nav>
+            <a mat-button routerLink="/" routerLinkActive="estActif" [routerLinkActiveOptions]="{exact: true}"><mat-icon>home</mat-icon><span>Acceuil</span></a>
+            <a mat-button routerLink="/produit" routerLinkActive="estActif">Liste des produits</a>
+        </nav>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+        <span class="filler"></span>
+        <span>
+            <button mat-button (click)="seConnecter()">{{msgConnecter}}</button>
+        </span>
+    </mat-toolbar-row>
+
+</mat-toolbar>
+
+
+

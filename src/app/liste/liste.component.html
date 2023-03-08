@@ -1,0 +1,54 @@
+
+<section class="liste">
+    <h1 class="liste-title">Nos Bieres</h1>
+
+    <!-- <article class="unProduit" *ngFor="let unProduit of produits" >
+        <p><a routerLink="/produit/{{unProduit.id_biere}}">Nom : {{unProduit.nom}}</a></p>
+        <p>Brasserie : {{unProduit.brasserie}}</p>
+        <p>Description : {{unProduit.description}}</p>
+    </article> -->
+    
+
+    
+    <div class="btn-container">
+      <a mat-button routerLink="ajouter" color="accent"  routerLinkActive="estActif" *ngIf="estConnecte" class="btn-ajouter">Ajouter</a>
+    </div>
+
+    <mat-table [dataSource]="produits">
+        <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef> Identifiant </mat-header-cell>
+            <mat-cell *matCellDef="let unProduit"> {{unProduit.id_biere}} </mat-cell>
+          </ng-container>
+        <ng-container matColumnDef="nom">
+            <mat-header-cell *matHeaderCellDef> Nom </mat-header-cell>
+            <mat-cell *matCellDef="let unProduit"> {{unProduit.nom}} </mat-cell>
+          </ng-container>
+        <ng-container matColumnDef="brasserie">
+            <mat-header-cell *matHeaderCellDef> Brasserie </mat-header-cell>
+            <mat-cell *matCellDef="let unProduit"> {{unProduit.brasserie}} </mat-cell>
+          </ng-container>
+        <ng-container matColumnDef="admin">
+            <mat-header-cell *matHeaderCellDef> Admin </mat-header-cell>
+            <mat-cell *matCellDef="let unProduit"> 
+              <a mat-button routerLink="/produit/{{unProduit.id_biere}}" routerLinkActive="estActif" *ngIf="estConnecte" class="btn-modifier">Modifier</a> 
+              <a mat-button (click)="supprimer(unProduit.id_biere)" *ngIf="estConnecte" class="btn-supprimer">Supprimer</a>
+            </mat-cell>
+          </ng-container>
+
+    
+          
+          <mat-header-row *matHeaderRowDef="colonnesAffichees"></mat-header-row>
+          <mat-row *matRowDef="let myRowData; columns: colonnesAffichees"></mat-row>
+    </mat-table>
+
+
+
+
+
+
+
+
+
+
+</section>
+

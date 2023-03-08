@@ -1,0 +1,22 @@
+.content{
+    padding: calc(2.5*64px);
+}
+
+.btn-ajouter{
+    border: solid 2px black;
+    width: 25%;
+    text-align: center;
+    background-color: #673ab7;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+.information{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}

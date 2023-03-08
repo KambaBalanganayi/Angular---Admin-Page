@@ -1,0 +1,38 @@
+.liste {
+    display: flex;
+    flex-direction: column;
+    padding-top: calc(2.5*64px);
+    .unProduit{
+        margin: 16px;
+        
+    }
+}
+.liste-title{
+    padding-left: 1rem;
+}
+
+.btn-ajouter{
+    border: solid 2px black;
+    width: 25%;
+    text-align: center;
+    background-color: #673ab7;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+}
+
+.btn-modifier{
+    background-color: #673ab7;
+    border: solid 3px white;
+    margin-right: 1rem;
+    border-radius: 7px;
+}
+
+.btn-supprimer{
+    background-color: #673ab7;
+    border: solid 3px white;
+    border-radius: 7px;
+}

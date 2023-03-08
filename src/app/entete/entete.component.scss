@@ -1,0 +1,30 @@
+:host{  /* app-entete*/
+    display: flex;
+    color: rebeccapurple;
+    padding: 8px;
+    button{
+        width: 150px;
+    }
+    a {/*:not(:has(h1)){*/
+        text-decoration: none;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        a {
+            margin-left: 16px;
+            &.estActif {
+                font-weight: bold;
+            }
+        }
+
+    }
+}
+
+mat-toolbar{
+    position: fixed;
+}
+
+.filler{
+    flex-grow: 1;
+}
